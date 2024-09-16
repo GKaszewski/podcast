@@ -1,0 +1,24 @@
+[package]
+name = "podcast"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+argon2 = "0.5.3"
+axum = { version = "0.7.5", features = ["multipart"] }
+axum-extra = "0.9.3"
+axum-login = "0.16.0"
+chrono = { version = "0.4.38", features = ["serde"] }
+cookie = { version = "0.18.1", features = ["private", "secure"] }
+hmac = "0.12.1"
+jwt = "0.16.0"
+serde = { version = "1.0.210", features = ["derive"] }
+serde_json = "1.0.128"
+sha2 = "0.10.8"
+sqlx = { version = "0.8.2", features = ["runtime-tokio-rustls", "macros", "any", "postgres", "chrono", "uuid"]}
+tokio = {version = "1.40.0", features = ["full"]}
+tower = {version = "0.5.0", features = ["util"]}
+tower-http = {version = "0.5.2", features = ["fs", "trace", "cors", "limit"]}
+tracing = "0.1.40"
+tracing-subscriber = {version = "0.3.18", features = ["env-filter"]}
+uuid = { version = "1.10.0", features = ["serde", "v4"] }
